@@ -30,6 +30,7 @@ body {
   }
 
   .navbar {
+    background-color: rgba(228, 228, 228, 0.747);
     color: #fff;
     padding: 3px 0;
     width: 100%;
@@ -104,7 +105,7 @@ body {
         padding-bottom: 10px;
         margin-bottom: 10px;
 
-        h3 {
+        & h3 {
           font-size: 1.4em;
           margin: 0;
           font-weight: bold;
@@ -122,11 +123,11 @@ body {
         }
       }
 
-      p {
+      & p {
         font-size: 16px;
       }
 
-      button {
+      & button {
         background-color: white;
         color: #008cba;
         border: 1px solid #ddd;
@@ -140,6 +141,7 @@ body {
         border-radius: 5px;
         transition: background-color 0.3s ease;
         margin-right: 5px;
+        display: flex;
 
         &:hover {
           background-color: #f1f1f1;
@@ -180,5 +182,16 @@ body {
       color: white;
       border: 1px solid #4caf50;
     }
+  }
+}
+
+.buttons {
+  display: flex;
+  position: relative;
+  width: 113px;
+  left: 90%;
+
+  &::after {
+    clear: both;
   }
 }

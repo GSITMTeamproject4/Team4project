@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 
 const URL =
-  'https://openapi.gg.go.kr/Ggdspsntaxistus?KEY=키 발급 받아주세요&Type=json';
+  'https://openapi.gg.go.kr/Ggdspsntaxistus?KEY=키 입력&Type=json';
 
 const WelfareTMap = () => {
   const [map, setMap] = useState(null);

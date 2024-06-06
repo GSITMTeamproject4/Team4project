@@ -1,5 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+// Community 컴포넌트
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Pagination from './Pagination';
 import '../css/Community.scss';
 import { PostContext } from '../components/PostContext';
@@ -10,9 +11,34 @@ const Community = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(5);
   const [showContentIndex, setShowContentIndex] = useState(-1);
+  const [editingIndex, setEditingIndex] = useState(-1);
+  const [editTitle, setEditTitle] = useState('');
+  const [editContent, setEditContent] = useState('');
+  const navigate = useNavigate();
 
   const toggleContent = (index) => {
     setShowContentIndex(index === showContentIndex ? -1 : index);
+  };
+
+  const handleDelete = (index) => {
+    setPosts(posts.filter((_, i) => i !== index));
+  };
+
+  const handleEdit = (index) => {
+    setEditingIndex(index);
+    const post = posts[index];
+    setEditTitle(post.title);
+    setEditContent(post.content);
+    navigate(`/community/write?index=${index}`);
+  };
+
+  const handleUpdate = (updatedIndex, updatedPost) => {
+    const updatedPosts = [...posts];
+    updatedPosts[updatedIndex] = updatedPost;
+    setPosts(updatedPosts);
+    setEditingIndex(-1);
+    setEditTitle('');
+    setEditContent('');
   };
 
   const indexOfLastPost = currentPage * postsPerPage;
@@ -43,10 +69,41 @@ const Community = () => {
                   <h3>{post.title}</h3>
                   <span className="postDate">{post.date}</span>
                 </div>
-                {showContentIndex === index ? <p>{post.content}</p> : null}
-                <button onClick={() => toggleContent(index)}>
-                  {showContentIndex === index ? '내용 숨기기' : '내용 보기'}
-                </button>
+                {editingIndex === index ? (
+                  <div>
+                    <input
+                      type="text"
+                      value={editTitle}
+                      onChange={(e) => setEditTitle(e.target.value)}
+                    />
+                    <textarea
+                      value={editContent}
+                      onChange={(e) => setEditContent(e.target.value)}
+                    ></textarea>
+                    <button
+                      onClick={() =>
+                        handleUpdate(index, {
+                          title: editTitle,
+                          content: editContent,
+                          date: new Date().toLocaleString(),
+                        })
+                      }
+                    >
+                      저장
+                    </button>
+                  </div>
+                ) : (
+                  <div>
+                    {showContentIndex === index ? <p>{post.content}</p> : null}
+                    <button onClick={() => toggleContent(index)}>
+                      {showContentIndex === index ? '내용 숨기기' : '내용 보기'}
+                    </button>
+                    <div className="buttons">
+                      <button onClick={() => handleEdit(index)}>수정</button>
+                      <button onClick={() => handleDelete(index)}>삭제</button>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>

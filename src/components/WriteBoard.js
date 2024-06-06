@@ -1,5 +1,6 @@
-import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+// WriteBoard 컴포넌트
+import React, { useState, useEffect, useContext } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import '../css/WriteBoard.scss';
 import { PostContext } from '../components/PostContext';
 
@@ -7,13 +8,32 @@ const WriteBoard = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const navigate = useNavigate();
-  const { setPosts } = useContext(PostContext);
+  const { posts, setPosts } = useContext(PostContext);
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const editIndex = queryParams.get('index');
+
+  useEffect(() => {
+    if (editIndex !== null) {
+      const postToEdit = posts[editIndex];
+      setTitle(postToEdit.title);
+      setContent(postToEdit.content);
+    }
+  }, [editIndex, posts]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const date = new Date().toLocaleString();
     const newPost = { title, content, date };
-    setPosts((prevPosts) => [newPost, ...prevPosts]);
+
+    if (editIndex !== null) {
+      const updatedPosts = [...posts];
+      updatedPosts[editIndex] = newPost;
+      setPosts(updatedPosts);
+    } else {
+      setPosts((prevPosts) => [newPost, ...prevPosts]);
+    }
+
     setTitle('');
     setContent('');
     navigate('/community');
@@ -22,7 +42,6 @@ const WriteBoard = () => {
   const handleTitleChange = (event) => {
     const inputTitle = event.target.value;
     if (inputTitle.length <= 40) {
-      // 제목 길이를 50자로 제한
       setTitle(inputTitle);
     }
   };

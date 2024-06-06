@@ -31,7 +31,7 @@ const StationInfo = () => {
       setLoading(true);
 
       const response = await axios.get(
-        `https://openapi.gg.go.kr/TBGGSTATNELVM?KEY=ec022a05fa564e738372a828bcdd4d57&Type=json&pSize=1000`
+        `https://openapi.gg.go.kr/TBGGSTATNELVM?KEY=키 입력&Type=json&pSize=1000`
       );
       setData(response.data.TBGGSTATNELVM[1].row);
     } catch (e) {

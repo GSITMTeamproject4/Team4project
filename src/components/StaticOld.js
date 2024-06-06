@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import { MapContext } from './MapContext';
 
-const URL = "/V2/api/DSSP-IF-10040?serviceKey=NA13UJKT6131B7S9";
+const URL = "/V2/api/DSSP-IF-10040?serviceKey=api 키 입력";
 
 const StaticOld = () => {
   const [data, setData] = useState(null);
