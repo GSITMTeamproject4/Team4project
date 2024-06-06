@@ -57,15 +57,9 @@
 │   │   ├── Welfare.js
 │   │   ├── WelfareTMap.js
 │   │   ├── WriteBoard.js
-│   │   ├── background
-│   │   │   ├── BackgroundAcc.js
-│   │   │   ├── BackgroundCommunity.js
-│   │   │   ├── BackgroundNav.js
-│   │   │   └── BackgroundWel.js
 │   │   └── setupProxy.js
 │   ├── css
 │   │   ├── Accident.scss
-│   │   ├── Background.scss
 │   │   ├── Chart.scss
 │   │   ├── Community.scss
 │   │   ├── Footer.scss
