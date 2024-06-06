@@ -23,6 +23,7 @@
 </div>
 
 ## ⭐️ 프로젝트 구조
+```
 ├── README.md
 ├── package-lock.json
 ├── package.json
@@ -86,3 +87,4 @@
 │   │   └── reset.scss
 │   └── index.js
 └── yarn.lock
+```
