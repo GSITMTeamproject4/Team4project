@@ -121,6 +121,7 @@
 
 ## ⭐️ 주요 기능
 ### 최적 경로 안내
+<img width="258" alt="image" src="https://github.com/GSITMTeamproject4/Team4project/assets/121008744/f6905dc1-576e-48ca-9d52-c72f56e41600">
 
 ### 승강기 현황 안내
 
