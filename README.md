@@ -23,4 +23,66 @@
 </div>
 
 ## ⭐️ 프로젝트 구조
-
+├── README.md
+├── package-lock.json
+├── package.json
+├── public
+│   ├── images
+│   └── index.html
+├── read.md
+├── src
+│   ├── App.js
+│   ├── components
+│   │   ├── Accident.js
+│   │   ├── Chart.js
+│   │   ├── Community.js
+│   │   ├── Footer.js
+│   │   ├── Header.js
+│   │   ├── Home.js
+│   │   ├── Layout.js
+│   │   ├── MapContext.js
+│   │   ├── Menu.js
+│   │   ├── Navigation.js
+│   │   ├── Pagination.js
+│   │   ├── PostContext.js
+│   │   ├── Road.js
+│   │   ├── StaticChild.js
+│   │   ├── StaticOld.js
+│   │   ├── StationInfo.js
+│   │   ├── TMap.js
+│   │   ├── TMap2.js
+│   │   ├── TMap3.js
+│   │   ├── TopButton.js
+│   │   ├── Welfare.js
+│   │   ├── WelfareTMap.js
+│   │   ├── WriteBoard.js
+│   │   ├── background
+│   │   │   ├── BackgroundAcc.js
+│   │   │   ├── BackgroundCommunity.js
+│   │   │   ├── BackgroundNav.js
+│   │   │   └── BackgroundWel.js
+│   │   └── setupProxy.js
+│   ├── css
+│   │   ├── Accident.scss
+│   │   ├── Background.scss
+│   │   ├── Chart.scss
+│   │   ├── Community.scss
+│   │   ├── Footer.scss
+│   │   ├── Header.scss
+│   │   ├── Home.scss
+│   │   ├── Layout.scss
+│   │   ├── Menu.scss
+│   │   ├── Navigation.scss
+│   │   ├── Pagination.scss
+│   │   ├── Road.scss
+│   │   ├── StationInfo.scss
+│   │   ├── TMap.scss
+│   │   ├── TMap2.scss
+│   │   ├── TMap3.scss
+│   │   ├── TopButton.scss
+│   │   ├── Welfare.scss
+│   │   ├── WelfareTMap.scss
+│   │   ├── WriteBoard.scss
+│   │   └── reset.scss
+│   └── index.js
+└── yarn.lock
