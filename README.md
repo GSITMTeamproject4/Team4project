@@ -131,6 +131,8 @@
 * 지하철 역명을 검색하면 해당 지하철의 승강기 현황 노출
 
 ### 🌈 사고다발지역 안내
-*  
+![image](https://github.com/GSITMTeamproject4/Team4project/assets/121008744/9fcdf073-fe10-431a-977f-644e591c6c56)
+
+* 지도의 마커를 클릭하거나 차트의 지역을 선택하면 해당 데이터 노출  
 
 ### 🌈 제보게시판
