@@ -126,6 +126,8 @@
 * 지도에 출발지, 도착지를 표시하면 보행자 최적 경로 및 예상 시간 노출
 
 ### 🌈 승강기 현황 안내
+![image](https://github.com/GSITMTeamproject4/Team4project/assets/121008744/fb57a9b7-6123-4e56-954d-88a1838ceaf0)
+
 * 지하철 역명을 검색하면 해당 지하철의 승강기 현황 노출
 
 ### 🌈 사고다발지역 안내
