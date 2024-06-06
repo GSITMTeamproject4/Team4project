@@ -121,7 +121,7 @@
 
 ## ⭐️ 주요 기능
 ### 🌈 최적 경로 안내 (사진은 고화질로 대체)
-<img width="500" alt="image" src="https://github.com/GSITMTeamproject4/Team4project/assets/121008744/f6905dc1-576e-48ca-9d52-c72f56e41600">
+![image](https://github.com/GSITMTeamproject4/Team4project/assets/121008744/3645800d-a2bf-4be3-8ac5-ec992d5aebea)
 
 * 지도에 출발지, 도착지를 표시하면 보행자 최적 경로 및 예상 시간 노출
 
