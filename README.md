@@ -9,7 +9,7 @@
 * 제보 게시판을 통해 제보를 받습니다.
 
 ## ⭐️ 시연 영상
-[![Video Label](http://img.youtube.com/vi/poOeQh1Vgvo/0.jpg)](https://youtu.be/poOeQh1Vgvo)
+[![Video Label](http://img.youtube.com/vi/poOeQh1Vgvo/sddefault.jpg)](https://youtu.be/poOeQh1Vgvo)
 
 ## ⭐️ 개발 환경
 <div>
