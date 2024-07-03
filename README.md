@@ -22,7 +22,7 @@
   <!--JQuery-->
   <img src="https://img.shields.io/badge/JQuery-0769AD?style=flat&logo=jQuery&logoColor=white"/>
   <!--React-->
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white">
+  <img src="https://img.shields.io/badge/mariadb-61DAFB?style=flat&logo=mariadb&logoColor=white">
 </div>
 
 ## ⭐️ 프로젝트 구조
